@@ -1,0 +1,159 @@
+/* 전역 스타일링 */
+* {
+    /* margin과 padding을 0 픽셀로, 없애버림 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    background-color: black;
+    /* navbar는 스크롤을 내려도 상단에 고정 */
+    position: fixed;
+    top: 0;
+    /* 다른 요소들보다 제일 위(앞)에 위치하도록 설정 */
+    z-index: 1;
+    width: 100%;
+    /* navbar 안의 아이템들이 flex 요소가 되도록 함*/
+    display: flex;
+    /* 로고와 a 태그 리스트 사이 공간을 주기 위함*/
+    justify-content: space-around;
+    align-items: center;
+    /* 창 너비가 줄어들 때 a 태그 리스트가 로고 밑으로 내려오게 하기 위함, 기본값은 nowrap이라 찌그러지기만 함 */
+    flex-wrap: wrap;
+}
+
+.navbar ul {
+    display: flex;
+    /* Vertical 정렬 */
+    align-items: center;
+    /* 창 너비가 줄어들 때 a 태그 리스트끼리도 밑으로 내려가게 하기 위함(두 줄이 됨), 안 하면 리스트 한 줄이 통째로 로고 밑으로 들어감 */
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    /* 리스트 목록 점 사라지게 */
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar li a {
+    padding: 2px 2px;
+    /* a 태그 텍스트 밑줄 사라지게 */
+    text-decoration: none;
+    color: white;
+}
+
+/* a 태그 호버 했을 때 */
+.navbar li a:hover{
+    color: gray;
+}
+
+.logo {
+    /* 로고 크기 설정 */
+    height: 45px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    /* 로고 크기만큼 이미지를 채움 */
+    width: 100%;
+}
+
+/* banner */
+.banner {
+    /* 이미지 주소를 넣기 위해 url("") */
+    background-image: url("main-img/banner.jpg");
+    /* 백그라운드 이미지 사이즈 컨트롤 */
+    /* cover 이미지 하나를 늘려서 공간을 채움
+       contian 이미지 원래 사이즈로 바둑판처럼 이미지 여러 개를 반복해 공간을 채움
+       contain에 background-repeat: no-repeat; 하면 반복 없이 이미지 하나만 들어가고 나머지 공간은 빈 공간으로 채워짐*/
+    background-size: cover;
+    background-position: center;
+    height: 448px;
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.banner_contents {
+    margin-left: 30px;
+    padding-top: 190px;
+    height: 190px;
+}
+
+.banner_title {
+    font-size: 3rem;
+    /* 폰트 굵기 */
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner_btn {
+    margin-top: 5px;
+    margin-bottom: 10px;   
+}
+
+.banner_btn button {
+    width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+.banner_btn button:hover {
+    background-color: gray;
+    /* 버튼 위에 마우스 커서가 올라가면 커서 모양 바뀜 */
+    cursor: pointer;
+}
+
+.banner_description {
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* row */
+.row {
+    color: white;
+}
+
+.row h2 {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.row_poster {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100%;
+    margin-right: 10px;
+    /* 창 크기에 따라 이미지가 커지고, 작아지고 할 때 450ms 의 딜레이 후 크기 변경됨 */
+    transition: transform 450ms;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_poster:hover {
+    /* 커서가 올라가면 포스터 이미지가 커지게 */
+    transform: scale(1.1);
+}
+
+.row_posters::-webkit-scrollbar {
+    /* 스크롤바가 안 보이게 */
+    display: none;
+}
+
+.row_posterLarge {
+    max-height: 250px;
+}
