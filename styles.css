@@ -19,8 +19,9 @@ body {
     width: 100%;
     /* navbar 안의 아이템들이 flex 요소가 되도록 함*/
     display: flex;
-    /* 로고와 a 태그 리스트 사이 공간을 주기 위함*/
-    justify-content: space-around;
+    /* space-around 로고와 a 태그 리스트 사이 공간을 주기 위함 -> 너무 중앙에 몰려있는 것 같아 보임 */
+    /* space-between으로 바꾸고 로고와 리스트에 각각 margin을 넣어서 자연스럽게 수정 */
+    justify-content: space-between;
     align-items: center;
     /* 창 너비가 줄어들 때 a 태그 리스트가 로고 밑으로 내려오게 하기 위함, 기본값은 nowrap이라 찌그러지기만 함 */
     flex-wrap: wrap;
@@ -32,6 +33,7 @@ body {
     align-items: center;
     /* 창 너비가 줄어들 때 a 태그 리스트끼리도 밑으로 내려가게 하기 위함(두 줄이 됨), 안 하면 리스트 한 줄이 통째로 로고 밑으로 들어감 */
     flex-wrap: wrap;
+    margin-right: 30px;
 }
 
 .navbar li {
@@ -58,6 +60,7 @@ body {
     width: 90px;
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .logo img {
@@ -71,11 +74,12 @@ body {
     background-image: url("main-img/banner.jpg");
     /* 백그라운드 이미지 사이즈 컨트롤 */
     /* cover 이미지 하나를 늘려서 공간을 채움
-       contian 이미지 원래 사이즈로 바둑판처럼 이미지 여러 개를 반복해 공간을 채움
+       contain 이미지 원래 사이즈로 바둑판처럼 이미지 여러 개를 반복해 공간을 채움
        contain에 background-repeat: no-repeat; 하면 반복 없이 이미지 하나만 들어가고 나머지 공간은 빈 공간으로 채워짐*/
     background-size: cover;
     background-position: center;
-    height: 448px;
+    /* height 448px은 배너가 너무 좁아 보여서 548px로 수정 */
+    height: 548px;
     color: white;
 
     margin-bottom: 20px;
@@ -129,9 +133,9 @@ body {
 }
 
 .row_poster {
-    width: 100%;
+    width: 15%;
     object-fit: contain;
-    max-height: 100%;
+    max-height: 15%;
     margin-right: 10px;
     /* 창 크기에 따라 이미지가 커지고, 작아지고 할 때 450ms 의 딜레이 후 크기 변경됨 */
     transition: transform 450ms;
@@ -155,5 +159,6 @@ body {
 }
 
 .row_posterLarge {
-    max-height: 250px;
+    /* large poster는 더 커보이게 250px에서 400px로 수정 */
+    max-height: 400px;
 }
