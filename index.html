@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css 스타일 시트 relative 연결-->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- header - 로고, 메뉴 바 -->
+     <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- 이동할 경로 -->
+                <!-- alt = 이미지가 깨졌을 때를 위한 대체 텍스트 -->
+                <a href="/">
+                    <img
+                        id="logo"
+                        src="main-img\netflixlogo-removebg-preview.png"
+                        alt="Netflix logo"
+                    />
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+            </ul>
+        </nav>
+     </header>
+
+
+     <!-- main - 추천 콘텐츠 배너, 각 추천 콘텐츠 row -->
+     <main>
+        <div class="banner">
+            <div class="banner_contents">
+                <!-- 그냥 모양만 같게 하기 위해 하드코딩 -->
+                <h1 class="banner_title">종이의 집</h1>
+                <div class="banner_btn">
+                    <button>재생</button>
+                </div>
+                <p>
+                    역사상 최대 규모의 강도 사건을 수행하기 위해
+                    <br/>
+                    교수라는 의문의 남자가 강도 8인단을 구출하는데...
+                </p>
+            </div>
+        </div>
+
+        <!-- 큰 포스터 열 -->
+        <div class="row">
+            <h2>NETFLIX ORIGINAL</h2>
+            <div class="row_posters">
+                <!-- 스타일링을 위한 클래스 2개 : row_poster, row_posterLarge -->
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+                <img
+                    src="main-img/large-movie4.jpg"
+                    alt=""
+                    class="row_poster row_posterLarge"
+                />
+            </div>
+        </div>
+
+        <!-- 작은 포스터 열 -->
+        <div class="row">
+            <h2>TRENDING NOW</h2>
+            <div class="row_posters">
+                <!-- 작은 포스터는 스타일링을 위한 클래스 하나만 넣어줌 -->
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+                <img 
+                    src="main-img/movie-1.jpeg"
+                    alt=""
+                    class="row_poster"
+                />
+            </div>
+        </div>
+     </main>
+
+     <!-- footer - 카피라이트 -->
+     <footer>
+
+     </footer>
+</body>
+</html>
